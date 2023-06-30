@@ -7,11 +7,11 @@ import java.util.*;
 public class SendEmail {
     public static void main(String[] args) {
         // informations sur l'expéditeur
-        String from = "medra7638@gmail.com";
-        String password = "ncyofjwniazygrbi";
+        String from = "miclimule@gmail.com";
+        String password = "jvmbwrwxalswjmtt";
 
         // informations sur le destinataire
-        String to = "miclimule@gmail.com";
+        String to = "medra7638@gmail.com";
 
         // configuration du serveur SMTP
         String host = "smtp.gmail.com";
@@ -41,8 +41,8 @@ public class SendEmail {
             message.setSubject("test d'envoi");
 
             // création de la pièce jointe
-            MimeBodyPart attachmentPart = new MimeBodyPart();
-            attachmentPart.attachFile("5_Sardinas_Patterson.pdf");
+            //MimeBodyPart attachmentPart = new MimeBodyPart();
+            //attachmentPart.attachFile("5_Sardinas_Patterson.pdf");
 
             // création du corps du message
             MimeBodyPart textPart = new MimeBodyPart();
@@ -51,7 +51,7 @@ public class SendEmail {
             // création du message multi-part
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(textPart);
-            multipart.addBodyPart(attachmentPart);
+            //multipart.addBodyPart(attachmentPart);
 
             message.setContent(multipart);
 
